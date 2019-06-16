@@ -36,7 +36,10 @@ const start = async () => {
 const mongoose = require('mongoose')
 
 // Connect to DB
-mongoose.connect('mongodb://localhost/mycargarage')
+/**
+ * mongodb://localhost:27017/mycargarage  to connect from host to mongo container
+ */
+mongoose.connect('mongodb://0.0.0.0:27017/mycargarage')
   .then(() => console.log('MongoDB connected…'))
   .catch(err => console.log(err))
 
