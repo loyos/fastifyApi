@@ -18,6 +18,8 @@ Json Example to create a Car
  # UPDATED
  
  Just run docker-compose up -d
+
+ docker exec -it fe284ea437ef /bin/sh ---> to go inside container on digitalOcean
  
  All info about docker images and project config is in docker-compose.yml
  
