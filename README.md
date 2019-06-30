@@ -1,6 +1,20 @@
 # fastifyApi
 basic api template using nodemon, fastify and swagger
 
+# To put on Swagger
+
+Json Example to create a Car
+
+{
+	"title": "Z5",
+	"brand": "blablacarrobonito",
+	"price": "8 000",
+	"age": 10,
+	"services": {
+		"BmW HK": "21/04/2016"
+	}
+}
+
  # UPDATED
  
  Just run docker-compose up -d
