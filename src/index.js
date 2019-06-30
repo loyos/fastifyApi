@@ -23,7 +23,7 @@ routes.forEach((route, index) => {
 // Run the server!
 const start = async () => {
   try {
-    await fastify.listen(3000)
+    await fastify.listen(9000, '0.0.0.0')
     fastify.swagger()
     fastify.log.info(`server listening on ${fastify.server.address().port}`)
   } catch (err) {
@@ -39,8 +39,8 @@ const mongoose = require('mongoose')
 /**
  * mongodb://localhost:27017/mycargarage  to connect from host to mongo container
  */
-mongoose.connect('mongodb://0.0.0.0:27017/mycargarage')
-  .then(() => console.log('MongoDB connected…'))
-  .catch(err => console.log(err))
+// mongoose.connect('mongodb://172.17.0.2:27017/mycargarage')
+//   .then(() => console.log('MongoDB connected…'))
+//   .catch(err => console.log(err))
 
 start()
