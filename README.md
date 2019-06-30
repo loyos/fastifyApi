@@ -25,6 +25,8 @@ Json Example to create a Car
  
  For swagger go to /documentation
  
+ To Use sh commands inside ci folder, run like this **sudo bash destroy.sh**
+ 
  **All info below is not being used**
  
   # General
