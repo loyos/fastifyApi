@@ -4,7 +4,9 @@ const fastify = require('fastify')({
 })
 
 fastify.register(require('fastify-cors'), {
-  // put your options here
+  origin: true,
+  allowedHeaders: ['Origin', 'X-Requested-With', 'Accept', 'Content-Type', 'Authorization'],
+  methods: ['GET', 'PUT', 'PATCH', 'POST', 'DELETE', 'OPTIONS']
 })
 
 // Import Swagger Options
