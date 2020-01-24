@@ -3,6 +3,10 @@ const fastify = require('fastify')({
   logger: true
 })
 
+fastify.register(require('fastify-cors'), {
+  // put your options here
+})
+
 // Import Swagger Options
 const swagger = require('./config/swagger')
 
@@ -11,7 +15,9 @@ fastify.register(require('fastify-swagger'), swagger.options)
 
 // Declare a route
 fastify.get('/', async (request, reply) => {
-  return { hello: 'world' }
+  return {
+    hello: 'world'
+  }
 })
 
 const routes = require('./routes');
